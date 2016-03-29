@@ -1,0 +1,69 @@
+@mixin addColors($class, $prop, $lighten : 0, $pseudo : '', $opacity : 1, $useTextColors : false) {
+	$colors : () !default;
+	@each $color in $colors {
+
+		$colorName : nth($color, 1);
+		$colorValue : nth($color, 2);
+
+		@if $useTextColors == true {
+			$colorValue : nth($color, 3);
+		}
+
+		&.#{ $class + "--" + $colorName }#{ $pseudo } {
+			@if $lighten < 0 {
+				#{$prop} : rgba(darken($colorValue, $lighten * -1), $opacity);
+			} @else {
+				#{$prop} : rgba(lighten($colorValue, $lighten), $opacity);
+			}
+		}
+	}
+}
+
+@mixin clearAfter {
+	&::after {
+		display : block;
+		content : "\0020";
+		width : 0;
+		height : 0;
+		margin : 0;
+		padding : 0;
+		clear : both;
+		float : none;
+	}
+}
+
+@mixin triangle ($direction : 'down', $border-width : 20px, $color : #f0f) {
+	display : block;
+	width : 0;
+	height : 0;
+
+	border-top : none;
+	border-right : none;
+	border-bottom : none;
+	border-left : none;
+
+	@if $direction == 'up' {
+		border-left: $border-width solid transparent;
+		border-right: $border-width solid transparent;
+		border-bottom: $border-width solid $color;
+	} @else if $direction == 'down' {
+		border-left: $border-width solid transparent;
+		border-right: $border-width solid transparent;
+		border-top: $border-width solid $color;
+	} @else if $direction == 'right' {
+		border-top: $border-width solid transparent;
+		border-bottom: $border-width solid transparent;
+		border-left: $border-width solid $color;
+	} @else { // left
+		border-top: $border-width solid transparent;
+		border-bottom: $border-width solid transparent;
+		border-right: $border-width solid $color;
+	}
+}
+
+@mixin addIcon($icon) {
+	font-family : 'FontAwesome';
+	content : $icon;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,53 @@
+$fa-font-path : "../jspm_packages/npm/font-awesome@4.4.0/fonts";
+
+$font-huge : 45px;
+$font-great : 37px;
+$font-large : 30px;
+$font-medium : 20px;
+$font-small : 16px;
+$font-tiny : 14px;
+
+$black : #000;
+$dark : #222;
+$light : #fff;
+$gray : #ecf0f1;
+$gray-dark : darken($gray, 25);
+
+$red : #e74c3c;
+$blue : #3498db;
+$turquoise : #1abc9c;
+
+$green : #2ecc71;
+$orange : #e67e22;
+
+// Color name, Color, Text color that goes great with color
+$colors :
+	('black' $black $light)
+	('dark' $dark $light)
+	('light' $light $dark)
+	('gray' $gray $dark)
+	('gray-dark' $gray-dark $light)
+	('blue' $blue $light)
+	('red' $red $light)
+	('turquoise' $turquoise $light)
+	('green' $green $light)
+	('orange' $orange $light);
+
+$air : 20px;
+
+$default-animation-time : 200ms;
+
+$font-lato : 'Lato', Helvetica, Arial, sans-serif;
+
+$font-default : $font-lato;
+
+
+$media-phone-portrait : "all and ( max-width : 320px )";
+$media-phone : "all and ( max-width : 767px )";
+$media-phone-landscape : $media-phone;
+$media-tablet-and-phone : "all and ( max-width : 1023px )";
+$media-tablet : "all and ( max-width : 1023px ) and ( min-width : 768px )";
+$media-tablet-portrait : $media-tablet;
+$media-tablet-landscape : "all and ( max-width : 1024px ) and ( min-width : 769px )";
+$media-desktop-and-tablet : "all and ( min-width : 768px )";
+$media-desktop : "all and ( min-width : 1024px )";

@@ -1,0 +1,45 @@
+{
+  "name": "munchood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/live-server src",
+    "deps": "./node_modules/.bin/jspm install",
+    "build": "./node_modules/.bin/jspm bundle-sfx --minify --no-mangle js/main src/js/build.js"
+  },
+  "author": "@thatsprettyfaroutman",
+  "license": "MIT",
+  "jspm": {
+    "directories": {
+      "baseURL": "src"
+    },
+    "dependencies": {
+      "normalize.css": "npm:normalize.css@^4.0.0",
+      "react": "npm:react@^0.13.2",
+      "xhttp": "npm:xhttp@^0.0.13"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.1.13",
+      "babel-runtime": "npm:babel-runtime@^5.1.13",
+      "core-js": "npm:core-js@^0.9.4"
+    }
+  },
+  "dependencies": {
+    "jspm": "^0.15.6",
+    "live-server": "^0.7.1"
+  },
+  "devDependencies": {
+    "babel": "^5.1.13",
+    "babel-core": "^5.1.13",
+    "gulp": "^3.9.1",
+    "require-dir": "^0.3.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-jspm": "^0.5.7",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-util": "^3.0.7"
+  }
+}
