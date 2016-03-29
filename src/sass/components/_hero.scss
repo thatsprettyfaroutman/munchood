@@ -1,0 +1,36 @@
+$block : 'hero';
+$air : 30px !default;
+
+.#{$block} {
+}
+
+.#{$block}__text {
+	padding : $air * 2 0 $air * 3 0;
+
+	h1, h2, h3, h4, h5, h6 {
+		text-align: center;
+		font-size : $font-large;
+		font-family : $font-pt-serif;
+		color : $dark;
+	}
+
+	p {
+		text-align: center;
+		font-size : $font-medium;
+		font-family : $font-lato;
+		color : $dark;
+
+		&:first-of-type {
+			font-family : $font-georgia;
+			font-style : italic;
+		}
+	}
+}
+
+@media #{ $media-phone } {
+	.#{$block}__text {
+		h1, h2, h3, h4, h5, h6 {
+			font-size : $font-large--phone;
+		}
+	}
+}

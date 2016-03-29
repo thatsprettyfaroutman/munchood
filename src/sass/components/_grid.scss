@@ -1,5 +1,5 @@
 $block : 'grid';
-$air : 14px !default;
+$air : 30px !default;
 
 // Percent based cols
 $cols :
@@ -29,14 +29,18 @@ $cols :
 .#{$block}-row {
 	display : block;
 	width : auto;
-	// max-width : 1024px;
-	max-width : 1200px;
+	max-width : 1700px;
+	// max-width : 1200px;
 	margin : 0 auto;
-	padding : 0;
+	padding : 0 $air;
 	clear : both;
 	float : none;
 
 	@include clearAfter();
+}
+
+.#{$block}-row--no-padding {
+	padding : 0;
 }
 
 .#{$block}-col {
@@ -47,6 +51,12 @@ $cols :
 
 .#{$block}-col--right {
 	float : right;
+}
+
+.#{$block}-col--center {
+	float : none;
+	margin-left : auto;
+	margin-right : auto;
 }
 
 

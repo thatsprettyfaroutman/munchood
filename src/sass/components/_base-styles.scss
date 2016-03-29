@@ -1,3 +1,36 @@
+$air : 30px !default;
+
+body {
+	line-height: 1.4;
+	font-size : $font-medium;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top : $air;
+	margin-bottom : $air;
+
+	&:first-child {
+		margin-top : 0;
+	}
+
+	&:last-child {
+		margin-bottom : 0;
+	}
+}
+
+p {
+	margin-top : $air;
+	margin-bottom : $air;
+
+	&:first-child {
+		margin-top : 0;
+	}
+
+	&:last-child {
+		margin-bottom : 0;
+	}
+}
+
 img {
 	display : block;
 	margin : 0;
