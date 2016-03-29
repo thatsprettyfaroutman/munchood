@@ -3,13 +3,15 @@ import {xhttp as Ajax} from 'xhttp';
 
 class SheetApi {
 
+	constructor() {
+		this._cache = {};
+	}
 
 
 	// Public methods
 	// ------------------------------------
 
 	get(template) {
-
 		if ( !template ) {
 			throw new Error('sheet-api.js: Template must be set');
 		}
@@ -18,7 +20,11 @@ class SheetApi {
 			throw new Error('sheet-api.js: Template must be set in API_CONFIG (api.config.js). Like dis : { template: "url_to_spreadsheet"}');
 		}
 
-		return new Promise((resolve, reject) => {
+		if ( this._cache[template] ) {
+			return this._cache[template];
+		}
+
+		this._cache[template] = new Promise((resolve, reject) => {
 			Ajax(
 				{ url : API_CONFIG[template] },
 				(res) => {
@@ -29,6 +35,8 @@ class SheetApi {
 				}
 			);
 		});
+
+		return this._cache[template];
 	}
 
 

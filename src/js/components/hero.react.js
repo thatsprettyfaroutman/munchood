@@ -8,8 +8,6 @@ export default class Hero extends React.Component {
 
 		this.state = {
 			image : null,
-			title : '',
-			body : ''
 		};
 
 		// Get data
@@ -20,7 +18,7 @@ export default class Hero extends React.Component {
 
 	render() {
 		return (
-			<section className="hero">
+			<div className="hero">
 				<div className="grid-row grid-row--no-padding">
 					<div className="grid-col grid-col--100">
 						<div className="hero__video">
@@ -28,15 +26,7 @@ export default class Hero extends React.Component {
 						</div>
 					</div>
 				</div>
-				<div className="hero__text">
-					<div className="grid-row">
-						<div className="grid-col grid-col--50 grid-col--tablet--60 grid-col--center">
-							<h1 className="heading heading--center">{ this.state.title }</h1>
-							<div className="body" dangerouslySetInnerHTML={ { __html : this.state.body} }></div>
-						</div>
-					</div>
-				</div>
-			</section>
+			</div>
 		);
 	}
 }
