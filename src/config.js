@@ -16,6 +16,7 @@ System.config({
 
 System.config({
   "map": {
+    "utils": "js/utils",
     "babel": "npm:babel-core@5.2.17",
     "babel-runtime": "npm:babel-runtime@5.2.17",
     "classnames": "npm:classnames@2.2.3",
@@ -139,4 +140,3 @@ System.config({
     }
   }
 });
-

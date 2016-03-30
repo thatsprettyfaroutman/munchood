@@ -9,7 +9,7 @@ export default class SvgImage extends React.Component {
 	render() {
 		let src = this._svgIsSupported() ? this.props.svg : this.props.bitmap;
 		return (
-			<img src={ src } alt={ this.props.alt } />
+			<img className={ this.props.className } src={ src } alt={ this.props.alt } />
 		)
 	}
 
@@ -21,5 +21,6 @@ export default class SvgImage extends React.Component {
 SvgImage.defaultProps = {
 	bitmap : null,
 	svg : null,
-	alt : ''
+	alt : '',
+	className : ''
 };

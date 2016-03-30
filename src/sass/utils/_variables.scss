@@ -3,6 +3,8 @@ $fa-font-path : "../jspm_packages/npm/font-awesome@4.4.0/fonts";
 $font-huge : 45px;
 $font-large : 90px;
 $font-large--phone : 60px;
+$font-large--lower : 80px;
+$font-medium--plus : 50px;
 $font-medium : 22px;
 $font-medium--lower : 20px;
 $font-small : 16px;
@@ -11,12 +13,12 @@ $font-tiny : 14px;
 $black : #000;
 $dark : #393939;
 $light : #fff;
-$gray : #ecf0f1;
+$gray : #f4f4f4;
 $gray-dark : darken($gray, 25);
 
-$red : #e74c3c;
+$red : #CC6060;
 $blue : #3498db;
-$turquoise : #1abc9c;
+$turquoise : #6dbe9c;
 
 $green : #2ecc71;
 $orange : #e67e22;
@@ -39,12 +41,12 @@ $air-between-items : $air * 4;
 
 $default-animation-time : 200ms;
 
-$font-lato : 'Lato', Helvetica, Arial, sans-serif;
+$font-lato : 'lato', Helvetica, Arial, sans-serif;
 $font-georgia : Georgia, serif;
-$font-pt-serif : 'PT serif', serif;
+$font-pt-serif : 'pt-serif', serif;
+$font-brandon : "brandon-grotesque", sans-serif;
 
 $font-default : $font-lato;
-
 
 $media-phone-portrait : "all and ( max-width : 320px )";
 $media-phone : "all and ( max-width : 767px )";

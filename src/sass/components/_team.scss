@@ -1,7 +1,7 @@
-$block : 'hero';
+$block : 'team';
 $air : 30px !default;
 
-.#{$block}__text {
+.#{$block} {
 	p {
 		&:first-of-type {
 			font-family : $font-georgia;

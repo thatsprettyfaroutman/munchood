@@ -10,7 +10,7 @@ export default class Header extends React.Component {
 	render() {
 		return (
 			<header className="header">
-				<SvgImage bitmap="images/logo.png" svg="images/logo.svg" alt="Online Marketplace For Homemade Food" />
+				<SvgImage bitmap="images/logo.png" svg="images/logo.svg" alt="Munchood" />
 			</header>
 		);
 	}

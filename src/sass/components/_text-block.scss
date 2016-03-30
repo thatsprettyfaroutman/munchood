@@ -3,7 +3,10 @@ $air : 30px !default;
 $air-between-items : $air * 4 !default;
 
 .#{$block} {
-	padding : $air * 2 0 $air-between-items 0;
+	padding : 0;
+	margin : 0;
+	margin-top : $air * 2;
+	margin-bottom : $air-between-items;
 
 	h1, h2, h3, h4, h5, h6 {
 		font-size : $font-large;

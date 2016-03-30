@@ -1,0 +1,54 @@
+$block : 'signup-form';
+$air : 30px !default;
+
+.#{$block} {
+	form {
+		position : relative;
+		display : block;
+		max-width : 640px - 140 - $air;
+		height : 70px;
+		margin : 0 auto;
+		padding : 0;
+		padding-right : 140px + $air;
+	}
+}
+
+.#{$block} input[type=text] {
+	display : block;
+	box-sizing : border-box;
+	width : 100%;
+	height : 100%;
+	line-height: 70px;
+	padding : 0 $air;
+	border : none;
+}
+
+.#{$block} button[type=submit] {
+	position : absolute;
+	display : block;
+	top : 0;
+	right : 0;
+	bottom : 0;
+	width : 140px;
+	background-color : $turquoise;
+	color : $light;
+	border : none;
+	font-family : $font-lato;
+	font-size : $font-medium;
+	text-transform: uppercase;
+}
+
+.#{$block} input[name=email] {
+	color : $turquoise;
+}
+
+.#{$block}--invalid-email input[name=email] {
+	color : $red;
+}
+
+.#{$block}__thanks {
+	text-align: center;
+	font-family: $font-pt-serif;
+	font-size: $font-medium--plus;
+	color: $turquoise;
+}

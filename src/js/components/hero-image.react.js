@@ -1,5 +1,6 @@
 import React from 'react';
 import SheetApi from 'services/sheet-api';
+import SvgImage from 'components/svg-image.react';
 
 export default class HeroImage extends React.Component {
 
@@ -8,6 +9,7 @@ export default class HeroImage extends React.Component {
 
 		this.state = {
 			image : null,
+			title : null
 		};
 
 		// Get data
@@ -18,11 +20,14 @@ export default class HeroImage extends React.Component {
 
 	render() {
 		return (
-			<div className="hero-image">
-				<div className="hero-image__video">
-					<img src={ this.state.image } />
-				</div>
+			<div className="hero-image" style={{
+				backgroundImage : ( this.state.image ? 'url(' + this.state.image + ')' : '' )
+			}}>
+				<h1>{ this.state.title }</h1>
+				<SvgImage className="hero-image__arrow" bitmap="images/hero__arrow.png" svg="images/hero__arrow.svg" alt="See more below" />
 			</div>
 		);
 	}
 }
+
+HeroImage.defaultProps = {};

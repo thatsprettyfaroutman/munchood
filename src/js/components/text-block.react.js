@@ -34,12 +34,23 @@ export default class TextBlock extends React.Component {
 			'heading--center' : this.props.align == 'center',
 		});
 
+		let mainHeading = (
+			<h1 className={headingClass}>
+				{ this.state.upperTitle ? <span className="heading__upper">{ this.state.upperTitle }</span> : '' }
+				{ this.state.title }
+			</h1>
+		);
+
+		let secondaryHeading = (
+			<h2 className={headingClass}>
+				{ this.state.upperTitle ? <span className="heading__upper">{ this.state.upperTitle }</span> : '' }
+				{ this.state.title }
+			</h2>
+		);
+
 		return (
 			<div className={textBlockClass}>
-				<h1 className={headingClass}>
-					{ this.state.upperTitle ? <span className="heading__upper">{ this.state.upperTitle }</span> : '' }
-					{ this.state.title }
-				</h1>
+				{ this.props.mainHeading ? mainHeading : secondaryHeading }
 				<div className="body" dangerouslySetInnerHTML={ { __html : this.state.body} }></div>
 			</div>
 		);
@@ -49,5 +60,6 @@ export default class TextBlock extends React.Component {
 TextBlock.defaultProps = {
 	align : null,
 	row : 0,
-	addSpace : null
+	addSpace : null,
+	mainHeading : false
 };
