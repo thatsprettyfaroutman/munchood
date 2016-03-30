@@ -1,9 +1,9 @@
-import React from 'react';
+import React     from 'react';
 
-import Header from 'components/header.react';
+import Header    from 'components/header.react';
 import HeroImage from 'components/hero-image.react';
 import TextBlock from 'components/text-block.react';
-import Image from 'components/image.react';
+import Image     from 'components/image.react';
 
 class App extends React.Component {
 

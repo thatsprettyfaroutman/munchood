@@ -1,4 +1,5 @@
-import React from 'react';
+import React    from 'react';
+import SvgImage from 'components/svg-image.react';
 
 export default class Header extends React.Component {
 
@@ -9,7 +10,7 @@ export default class Header extends React.Component {
 	render() {
 		return (
 			<header className="header">
-				<img src="images/logo.png" alt="Online Marketplace For Homemade Food" />
+				<SvgImage bitmap="images/logo.png" svg="images/logo.svg" alt="Online Marketplace For Homemade Food" />
 			</header>
 		);
 	}

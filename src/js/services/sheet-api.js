@@ -59,7 +59,7 @@ class SheetApi {
 			let fields = itemRawData.match(fieldRe).map((item) => {
 				let name = item.split('field--');
 				name = name[1].split(':');
-				name = this._convertToCamel(name[0]);
+				name = this._snakeToCamel(name[0]);
 
 				return {
 					delimiter : item,
@@ -81,8 +81,8 @@ class SheetApi {
 		});
 	}
 
-	_convertToCamel(str) {
-		return str.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); });
+	_snakeToCamel(str) {
+		return str.replace(/-([a-z])/g, g => { return g[1].toUpperCase(); });
 	}
 
 }

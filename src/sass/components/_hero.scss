@@ -2,4 +2,10 @@ $block : 'hero';
 $air : 30px !default;
 
 .#{$block} {
+	p {
+		&:first-of-type {
+			font-family : $font-georgia;
+			font-style : italic;
+		}
+	}
 }

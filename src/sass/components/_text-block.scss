@@ -15,11 +15,6 @@ $air-between-items : $air * 4 !default;
 		font-size : $font-medium;
 		font-family : $font-lato;
 		color : $dark;
-
-		&:first-of-type {
-			font-family : $font-georgia;
-			font-style : italic;
-		}
 	}
 }
 

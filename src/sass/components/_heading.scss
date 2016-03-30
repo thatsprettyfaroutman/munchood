@@ -3,6 +3,8 @@ $air : 30px;
 
 .#{$block} {
 	position: relative;
+	text-transform: lowercase;
+	font-weight : 700;
 }
 
 .#{$block}::after {
@@ -23,4 +25,13 @@ $air : 30px;
 .#{$block}--center::after {
 	margin-left : auto;
 	margin-right : auto;
+}
+
+.#{$block}__upper {
+	display : block;
+	text-transform: uppercase;
+	font-family : $font-lato;
+	font-size : $font-medium--lower;
+	font-weight: 400;
+	color : lighten($dark, 50);
 }
