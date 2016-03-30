@@ -1,1 +1,0 @@
-module.exports = require("npm:xhttp@0.0.13/dist/xhttp");
