@@ -1,0 +1,30 @@
+$block : 'person';
+$air : 30px !default;
+$air-between-items : $air * 4 !default;
+
+.#{$block} {
+	margin-bottom : $air-between-items;
+
+	h1, h2, h3 {
+		font-family : $font-pt-serif;
+		font-size : $font-medium--something
+	}
+
+	h4, h5, h6 {
+		font-family : $font-lato;
+		font-size : $font-small;
+		font-weight : 700;
+		color : lighten($dark, 50);
+		text-transform: uppercase;
+	}
+
+	p {
+		font-familyt : $font-lato;
+		font-size : $font-medium;
+		font-weight : 400;
+	}
+}
+
+.#{$block}__text {
+	padding : $air * 4;
+}
