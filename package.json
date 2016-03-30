@@ -15,6 +15,7 @@
       "baseURL": "src"
     },
     "dependencies": {
+      "classnames": "npm:classnames@^2.2.3",
       "normalize.css": "npm:normalize.css@^4.0.0",
       "react": "npm:react@^0.13.2",
       "xhttp": "npm:xhttp@^0.0.13"

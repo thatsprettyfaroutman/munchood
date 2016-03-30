@@ -18,6 +18,7 @@ System.config({
   "map": {
     "babel": "npm:babel-core@5.2.17",
     "babel-runtime": "npm:babel-runtime@5.2.17",
+    "classnames": "npm:classnames@2.2.3",
     "components": "js/components",
     "core-js": "npm:core-js@0.9.7",
     "normalize.css": "npm:normalize.css@4.0.0",

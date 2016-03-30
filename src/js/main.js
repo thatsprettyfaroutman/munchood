@@ -1,8 +1,9 @@
 import React from 'react';
 
 import Header from 'components/header.react';
-import Hero from 'components/hero.react';
+import HeroImage from 'components/hero-image.react';
 import TextBlock from 'components/text-block.react';
+import Image from 'components/image.react';
 
 class App extends React.Component {
 
@@ -10,27 +11,32 @@ class App extends React.Component {
 		return (
 			<div className="app">
 
-				<section className="top">
-					<Header />
-					<Hero />
-					<TextBlock row="0" />
+				<Header />
+
+				<section className="hero">
+					<HeroImage />
+					<div className="grid-row">
+						<div className="grid-col grid-col--40 grid-col--tablet--60 grid-col--center">
+							<TextBlock row="0" align="center" />
+						</div>
+					</div>
 				</section>
 
 				<section className="features">
-					<div className="grid-row">
+					<div className="grid-row features__item">
 						<div className="grid-col grid-col--40">
-							<TextBlock row="1" />
+							<TextBlock row="1" addSpace="after" />
 						</div>
 						<div className="grid-col grid-col--60">
-							<Hero />
+							<Image row="0" />
 						</div>
 					</div>
-					<div className="grid-row">
+					<div className="grid-row features__item">
 						<div className="grid-col grid-col--60">
-							<Hero />
+							<Image row="1" />
 						</div>
 						<div className="grid-col grid-col--40">
-							<TextBlock row="1" />
+							<TextBlock row="2" addSpace="before" />
 						</div>
 					</div>
 				</section>

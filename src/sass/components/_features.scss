@@ -1,0 +1,11 @@
+$block : 'features';
+$air : 30px !default;
+$air-between-items : $air * 4 !default;
+
+.#{$block} {
+
+}
+
+.#{$block}__item {
+	margin-bottom : $air-between-items;
+}

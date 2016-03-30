@@ -16,6 +16,10 @@ $air : 30px;
 	background-color : $dark;
 }
 
+.#{$block}--center {
+	text-align: center;
+}
+
 .#{$block}--center::after {
 	margin-left : auto;
 	margin-right : auto;

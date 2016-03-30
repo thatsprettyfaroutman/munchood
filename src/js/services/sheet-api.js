@@ -47,7 +47,7 @@ class SheetApi {
 
 	_cleanUpSheetData(data) {
 		let cells = data.feed.entry;
-		let fieldRe = /(|, )field--\w{1,}: /gi;
+		let fieldRe = /(|, )field--(\w|-){1,}: /gi;
 
 		return cells.map((item, i) => {
 			let row = {};
@@ -59,7 +59,7 @@ class SheetApi {
 			let fields = itemRawData.match(fieldRe).map((item) => {
 				let name = item.split('field--');
 				name = name[1].split(':');
-				name = name[0];
+				name = this._convertToCamel(name[0]);
 
 				return {
 					delimiter : item,
@@ -79,6 +79,10 @@ class SheetApi {
 
 			return row;
 		});
+	}
+
+	_convertToCamel(str) {
+		return str.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); });
 	}
 
 }
