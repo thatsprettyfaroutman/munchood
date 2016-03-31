@@ -3,42 +3,42 @@ $air : 30px !default;
 $air-between-items : $air * 4 !default;
 
 .#{$block} {
-	padding : 0;
-	margin : 0;
-	margin-top : $air * 2;
-	margin-bottom : $air-between-items;
+  padding : 0;
+  margin : 0;
+  margin-top : $air * 2;
+  margin-bottom : $air-between-items;
 
-	h1, h2, h3, h4, h5, h6 {
-		font-size : $font-large;
-		font-family : $font-pt-serif;
-		color : $dark;
-	}
+  h1, h2, h3, h4, h5, h6 {
+    font-size : $font-large;
+    font-family : $font-pt-serif;
+    color : $dark;
+  }
 
-	p {
-		font-size : $font-medium;
-		font-family : $font-lato;
-		color : $dark;
-	}
+  p {
+    font-size : $font-medium;
+    font-family : $font-lato;
+    color : $dark;
+  }
 }
 
 .#{$block}--center {
-	h1, h2, h3, h4, h5, h6, p {
-		text-align: center;
-	}
+  h1, h2, h3, h4, h5, h6, p {
+    text-align: center;
+  }
 }
 
 .#{$block}--space-before {
-	padding-left : $air * 3;
+  padding-left : $air * 3;
 }
 
 .#{$block}--space-after {
-	padding-right : $air * 3;
+  padding-right : $air * 3;
 }
 
 @media #{ $media-phone } {
-	.#{$block} {
-		h1, h2, h3, h4, h5, h6 {
-			font-size : $font-large--phone;
-		}
-	}
+  .#{$block} {
+    h1, h2, h3, h4, h5, h6 {
+      font-size : $font-large--phone;
+    }
+  }
 }

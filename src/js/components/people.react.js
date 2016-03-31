@@ -5,39 +5,39 @@ import Person     from 'components/person.react';
 
 export default class People extends React.Component {
 
-	constructor(props) {
-		super(props);
+  constructor(props) {
+    super(props);
 
-		this.state = {
-			people : [],
-		};
+    this.state = {
+      people : [],
+    };
 
-		// Get data
-		SheetApi.get('people').then(data => {
-			let people = [];
+    // Get data
+    SheetApi.get('people').then(data => {
+      let people = [];
 
-			data.forEach(item => {
-				people.push(
-					<Person
-						title={ item.title }
-						body={ item.body }
-						image={ item.image }
-						role={ item.role }
-					/>
-				);
-			});
+      data.forEach(item => {
+        people.push(
+          <Person
+            title={ item.title }
+            body={ item.body }
+            image={ item.image }
+            role={ item.role }
+          />
+        );
+      });
 
-			this.setState({ people : people });
-		});
-	}
+      this.setState({ people : people });
+    });
+  }
 
-	render() {
-		return (
-			<div className="people">
-				{ this.state.people }
-			</div>
-		);
-	}
+  render() {
+    return (
+      <div className="people">
+        { this.state.people }
+      </div>
+    );
+  }
 }
 
 People.defaultProps = {

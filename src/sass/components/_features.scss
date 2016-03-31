@@ -7,5 +7,5 @@ $air-between-items : $air * 4 !default;
 }
 
 .#{$block}__item {
-	margin-bottom : $air-between-items;
+  margin-bottom : $air-between-items;
 }

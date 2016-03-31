@@ -2,44 +2,44 @@ $block : 'hero-image';
 $air : 30px !default;
 
 .#{$block} {
-	position : relative;
-	display : block;
-	height : 850px;
-	padding-top : 50px;
-	padding-bottom : 50px;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
+  position : relative;
+  display : block;
+  height : 600px;
+  padding-top : 50px;
+  padding-bottom : 50px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 
-	&::before {
-		content : '\0020';
-		position : absolute;
-		top : 0;
-		right : 0;
-		bottom : 0;
-		left : 0;
-		background-color : rgba($black, 0.5);
-	}
+  &::before {
+    content : '\0020';
+    position : absolute;
+    top : 0;
+    right : 0;
+    bottom : 0;
+    left : 0;
+    background-color : rgba($black, 0.5);
+  }
 
-	h1, h2, h3, h4, h5, h6, p {
-		position : relative;
-		top : 50%;
-		max-width : 1000px;
-		margin : 0 auto;
-		margin-top : 250px * -0.5;
-		text-align : center;
-		font-family : $font-brandon;
-		text-transform: uppercase;
-		color : $light;
-		font-size : $font-large;
-		font-weight: 500;
-	}
+  h1, h2, h3, h4, h5, h6, p {
+    position : relative;
+    top : 50%;
+    max-width : 1000px;
+    margin : 0 auto;
+    margin-top : 250px * -0.5;
+    text-align : center;
+    font-family : $font-brandon;
+    text-transform: uppercase;
+    color : $light;
+    font-size : $font-large;
+    font-weight: 500;
+  }
 }
 
 .#{$block}__arrow {
-	position : absolute;
-	width : 46px;
-	left : 50%;
-	bottom : $air * 2;
-	margin-left : 46px * -0.5;
+  position : absolute;
+  width : 46px;
+  left : 50%;
+  bottom : $air * 2;
+  margin-left : 46px * -0.5;
 }

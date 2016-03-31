@@ -5,5 +5,6 @@ export default {
 	'text-block' : 'https://spreadsheets.google.com/feeds/list/1g3qlNKrahvvsgkEqsVxBanqxxMtKmcWPtqsGjUD2a3c/3/public/basic?alt=json',
 	'image'      : 'https://spreadsheets.google.com/feeds/list/1g3qlNKrahvvsgkEqsVxBanqxxMtKmcWPtqsGjUD2a3c/4/public/basic?alt=json',
 	'people'     : 'https://spreadsheets.google.com/feeds/list/1g3qlNKrahvvsgkEqsVxBanqxxMtKmcWPtqsGjUD2a3c/5/public/basic?alt=json',
+	'map'        : 'https://spreadsheets.google.com/feeds/list/1g3qlNKrahvvsgkEqsVxBanqxxMtKmcWPtqsGjUD2a3c/6/public/basic?alt=json',
 
 };

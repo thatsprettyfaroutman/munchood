@@ -3,87 +3,87 @@ import {xhttp as Ajax} from 'xhttp';
 
 class SheetApi {
 
-	constructor() {
-		this._cache = {};
-	}
+  constructor() {
+    this._cache = {};
+  }
 
 
-	// Public methods
-	// ------------------------------------
+  // Public methods
+  // ------------------------------------
 
-	get(template) {
-		if ( !template ) {
-			throw new Error('sheet-api.js: Template must be set');
-		}
+  get(template) {
+    if ( !template ) {
+      throw new Error('sheet-api.js: Template must be set');
+    }
 
-		if ( !API_CONFIG[template] ) {
-			throw new Error('sheet-api.js: Template must be set in API_CONFIG (api.config.js). Like dis : { template: "url_to_spreadsheet"}');
-		}
+    if ( !API_CONFIG[template] ) {
+      throw new Error('sheet-api.js: Template must be set in API_CONFIG (api.config.js). Like dis : { template: "url_to_spreadsheet"}');
+    }
 
-		if ( this._cache[template] ) {
-			return this._cache[template];
-		}
+    if ( this._cache[template] ) {
+      return this._cache[template];
+    }
 
-		this._cache[template] = new Promise((resolve, reject) => {
-			Ajax(
-				{ url : API_CONFIG[template] },
-				(res) => {
-					resolve(this._cleanUpSheetData(res));
-				},
-				(err) => {
-					reject(err);
-				}
-			);
-		});
+    this._cache[template] = new Promise((resolve, reject) => {
+      Ajax(
+        { url : API_CONFIG[template] },
+        (res) => {
+          resolve(this._cleanUpSheetData(res));
+        },
+        (err) => {
+          reject(err);
+        }
+      );
+    });
 
-		return this._cache[template];
-	}
-
-
+    return this._cache[template];
+  }
 
 
-	// Private methods
-	// ------------------------------------
 
-	_cleanUpSheetData(data) {
-		let cells = data.feed.entry;
-		let fieldRe = /(|, )field--(\w|-){1,}: /gi;
 
-		return cells.map((item, i) => {
-			let row = {};
-			let itemRawData = item.content.$t;
+  // Private methods
+  // ------------------------------------
 
-			// First cell is title apparently.
-			row['title'] = item.title.$t;
+  _cleanUpSheetData(data) {
+    let cells = data.feed.entry;
+    let fieldRe = /(|, )field--(\w|-){1,}: /gi;
 
-			let fields = itemRawData.match(fieldRe).map((item) => {
-				let name = item.split('field--');
-				name = name[1].split(':');
-				name = this._snakeToCamel(name[0]);
+    return cells.map((item, i) => {
+      let row = {};
+      let itemRawData = item.content.$t;
 
-				return {
-					delimiter : item,
-					name : name
-				};
-			});
+      // First cell is title apparently.
+      row['title'] = item.title.$t;
 
-			let itemData = itemRawData.split(new RegExp(fields.map((item) => {
-				return item.delimiter;
-			}).join('|')));
+      let fields = itemRawData.match(fieldRe).map((item) => {
+        let name = item.split('field--');
+        name = name[1].split(':');
+        name = this._snakeToCamel(name[0]);
 
-			itemData.shift();
+        return {
+          delimiter : item,
+          name : name
+        };
+      });
 
-			fields.forEach((field, i) => {
-				row[field.name] = itemData[i];
-			});
+      let itemData = itemRawData.split(new RegExp(fields.map((item) => {
+        return item.delimiter;
+      }).join('|')));
 
-			return row;
-		});
-	}
+      itemData.shift();
 
-	_snakeToCamel(str) {
-		return str.replace(/-([a-z])/g, g => { return g[1].toUpperCase(); });
-	}
+      fields.forEach((field, i) => {
+        row[field.name] = itemData[i];
+      });
+
+      return row;
+    });
+  }
+
+  _snakeToCamel(str) {
+    return str.replace(/-([a-z])/g, g => { return g[1].toUpperCase(); });
+  }
 
 }
 

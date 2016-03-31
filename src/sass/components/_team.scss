@@ -2,6 +2,6 @@ $block : 'team';
 $air : 30px !default;
 
 .#{$block} .text-block p:first-of-type {
-	font-family : $font-georgia;
-	font-style : italic;
+  font-family : $font-georgia;
+  font-style : italic;
 }

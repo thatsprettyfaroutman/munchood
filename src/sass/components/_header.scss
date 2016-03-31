@@ -2,11 +2,11 @@ $block : 'header';
 $air : 30px !default;
 
 .#{$block} {
-	padding : $air 0;
+  padding : $air 0;
 
-	img {
-		height : 100px;
-		width : auto;
-		margin : 0 auto;
-	}
+  img {
+    height : 100px;
+    width : auto;
+    margin : 0 auto;
+  }
 }

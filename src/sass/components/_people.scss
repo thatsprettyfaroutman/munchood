@@ -1,9 +1,9 @@
 $block : 'people';
 
 .#{$block} {
-	.person:nth-child(even) {
-		.grid-col {
-			float : right;
-		}
-	}
+  .person:nth-child(even) {
+    .grid-col {
+      float : right;
+    }
+  }
 }

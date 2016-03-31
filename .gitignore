@@ -2,3 +2,4 @@ node_modules
 src/jspm_packages
 src/js/build.js
 src/js/build.js.map
+src/main.min.css

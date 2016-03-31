@@ -3,31 +3,31 @@ $air : 30px !default;
 $air-between-items : $air * 4 !default;
 
 .#{$block} {
-	padding : $air * 4;
-	margin-bottom : $air-between-items;
-	background-color : $gray;
+  padding : $air * 4;
+  margin-bottom : $air-between-items;
+  background-color : $gray;
 }
 
 .#{$block} .text-block {
-	margin-top : 0;
-	margin-bottom : $air * 2;
+  margin-top : 0;
+  margin-bottom : $air * 2;
 }
 
 .#{$block} .heading {
-	text-align: center;
-	font-size : $font-large--lower;
+  text-align: center;
+  font-size : $font-large--lower;
 
-	&::after {
-		content : none;
-	}
+  &::after {
+    content : none;
+  }
 }
 
 .#{$block} .body {
-	max-width : 900px;
-	margin-left : auto;
-	margin-right : auto;
-	text-align: center;
-	font-family : $font-georgia;
-	font-style: italic;
-	color : lighten($dark, 50);
+  max-width : 900px;
+  margin-left : auto;
+  margin-right : auto;
+  text-align: center;
+  font-family : $font-georgia;
+  font-style: italic;
+  color : lighten($dark, 50);
 }
