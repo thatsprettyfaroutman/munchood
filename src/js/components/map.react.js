@@ -1,5 +1,6 @@
-import React from 'react';
-import Uid   from 'utils/uid';
+import React    from 'react';
+import Uid      from 'utils/uid';
+import SheetApi from 'services/sheet-api';
 
 export default class Map extends React.Component {
 
@@ -22,11 +23,36 @@ export default class Map extends React.Component {
     script.src = "https://maps.googleapis.com/maps/api/js?sensor=false";
     script.async = true;
     script.onload = () => {
-      let gmaps = this.state.gmaps;
       let renderedMap = document.createElement('div');
       renderedMap.style.height = '100%';
       let gmap = new google.maps.Map(renderedMap, this.props);
       document.getElementById(this.state.uid).appendChild(renderedMap);
+
+      // Get data from google sheets
+      SheetApi.get('maps').then(data => {
+        if ( this.props.row > -1 && this.props.row < data.length ) {
+          let lat = parseFloat( data[this.props.row].latitude );
+          let lng = parseFloat( data[this.props.row].longitude );
+          let center = new google.maps.LatLng( lat, lng );
+
+          let mapPin = {
+            url: 'images/map-pin.png',
+            scaledSize: new google.maps.Size(241 / 2, 291 / 2)
+            // size: new google.maps.Size(100, 100),
+            // origin: new google.maps.Point(50, 50),
+            // anchor: new google.maps.Point(0, 0)
+          };
+
+          let marker = new google.maps.Marker({
+            position : center,
+            map : gmap,
+            icon : mapPin
+          });
+
+          gmap.panTo( center );
+        }
+      });
+
     }
     document.body.appendChild(script);
 
@@ -40,8 +66,9 @@ export default class Map extends React.Component {
 }
 
 Map.defaultProps = {
-  center : {lat : 59.938043, lng : 30.337157},
-  zoom : 15,
+  // center : {lat : 59.938043, lng : 30.337157},
+  row : 0,
+  zoom : 17,
   scrollwheel : false,
   navigationControl : false,
   mapTypeControl : false,
