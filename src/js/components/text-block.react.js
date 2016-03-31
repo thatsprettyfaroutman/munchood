@@ -1,5 +1,5 @@
-import React from 'react';
-import SheetApi from 'services/sheet-api';
+import React      from 'react';
+import SheetApi   from 'services/sheet-api';
 import classNames from 'classnames';
 
 export default class TextBlock extends React.Component {

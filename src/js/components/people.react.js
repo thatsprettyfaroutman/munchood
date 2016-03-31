@@ -1,7 +1,7 @@
-import React from 'react';
-import SheetApi from 'services/sheet-api';
+import React      from 'react';
+import SheetApi   from 'services/sheet-api';
 import classNames from 'classnames';
-import Person from 'components/person.react';
+import Person     from 'components/person.react';
 
 export default class People extends React.Component {
 
@@ -33,9 +33,9 @@ export default class People extends React.Component {
 
 	render() {
 		return (
-			<ul className="people">
+			<div className="people">
 				{ this.state.people }
-			</ul>
+			</div>
 		);
 	}
 }

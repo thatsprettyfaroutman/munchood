@@ -5,6 +5,7 @@ import TextBlock  from 'components/text-block.react';
 import Image      from 'components/image.react';
 import SignupForm from 'components/signup-form.react';
 import People     from 'components/people.react';
+import Map        from 'components/map.react';
 
 class App extends React.Component {
 
@@ -58,6 +59,17 @@ class App extends React.Component {
 						</div>
 					</div>
 					<People />
+				</section>
+
+				<section className="contact-info">
+					<div className="grid-row grid-row--no-padding grid-row--full-width">
+						<div className="grid-col grid-col--60">
+							<Map />
+						</div>
+						<div className="grid-col grid-col--40">
+							<TextBlock row="5" addSpace="before" />
+						</div>
+					</div>
 				</section>
 
 			</div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React    from 'react';
 import SheetApi from 'services/sheet-api';
 
 export default class Image extends React.Component {

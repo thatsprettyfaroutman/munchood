@@ -16,6 +16,7 @@
     },
     "dependencies": {
       "classnames": "npm:classnames@^2.2.3",
+      "google-map-react": "npm:google-map-react@^0.11.2",
       "normalize.css": "npm:normalize.css@^4.0.0",
       "react": "npm:react@^0.13.2",
       "xhttp": "npm:xhttp@^0.0.13"

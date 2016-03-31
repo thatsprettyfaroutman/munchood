@@ -43,6 +43,10 @@ $cols :
 	padding : 0;
 }
 
+.#{$block}-row--full-width {
+	max-width : none;
+}
+
 .#{$block}-col {
 	box-sizing : border-box;
 	min-height : 10px;
