@@ -1,0 +1,21 @@
+$block : 'footer';
+$air : 30px !default;
+
+.#{$block} {
+  padding : $air * 5 0;
+	background-color : $dark;
+	color : $light;
+	text-align: center;
+
+	a {
+		display : inline-block;
+		margin : 0 $air;
+		font-size : 40px;
+		line-height: 60px;
+		color : inherit;
+	}
+
+	a:hover {
+		color : $turquoise;
+	}
+}

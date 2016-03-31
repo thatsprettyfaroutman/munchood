@@ -6,6 +6,7 @@ import Image      from 'components/image.react';
 import SignupForm from 'components/signup-form.react';
 import People     from 'components/people.react';
 import Map        from 'components/map.react';
+import Footer     from 'components/footer.react';
 
 class App extends React.Component {
 
@@ -71,6 +72,8 @@ class App extends React.Component {
             </div>
           </div>
         </section>
+
+        <Footer />
 
       </div>
     )

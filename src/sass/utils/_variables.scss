@@ -1,5 +1,7 @@
-$fa-font-path : "../jspm_packages/npm/font-awesome@4.4.0/fonts";
+// Font Awesome fonts path
+$fa-font-path : "../jspm_packages/npm/font-awesome@4.5.0/fonts";
 
+// Font sizes or something
 $font-huge : 45px;
 $font-large : 80px;
 $font-large--phone : 60px;
@@ -11,6 +13,14 @@ $font-medium--lower : 20px;
 $font-small : 18px;
 $font-tiny : 14px;
 
+// Font families
+$font-lato : 'lato', Helvetica, Arial, sans-serif;
+$font-georgia : Georgia, serif;
+$font-pt-serif : 'pt-serif', serif;
+$font-brandon : "brandon-grotesque", sans-serif;
+$font-default : $font-lato;
+
+// Colors
 $black : #000;
 $dark : #393939;
 $light : #fff;
@@ -24,7 +34,7 @@ $turquoise : #6dbe9c;
 $green : #2ecc71;
 $orange : #e67e22;
 
-// Color name, Color, Text color that goes great with color
+// Color name, Color, Text color that goes great with color. Used in some mixins (_mixins.scss)
 $colors :
   ('black' $black $light)
   ('dark' $dark $light)
@@ -37,18 +47,14 @@ $colors :
   ('green' $green $light)
   ('orange' $orange $light);
 
+// Air
 $air : 30px;
 $air-between-items : $air * 4;
 
+// Defaults
 $default-animation-time : 200ms;
 
-$font-lato : 'lato', Helvetica, Arial, sans-serif;
-$font-georgia : Georgia, serif;
-$font-pt-serif : 'pt-serif', serif;
-$font-brandon : "brandon-grotesque", sans-serif;
-
-$font-default : $font-lato;
-
+// Media queries
 $media-phone-portrait : "all and ( max-width : 320px )";
 $media-phone : "all and ( max-width : 767px )";
 $media-phone-landscape : $media-phone;

@@ -21,6 +21,7 @@ System.config({
     "classnames": "npm:classnames@2.2.3",
     "components": "js/components",
     "core-js": "npm:core-js@0.9.7",
+    "font-awesome": "npm:font-awesome@4.5.0",
     "google-map-react": "npm:google-map-react@0.11.2",
     "normalize.css": "npm:normalize.css@4.0.0",
     "react": "npm:react@0.13.2",
@@ -145,6 +146,9 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "promise": "npm:promise@7.1.1",
       "ua-parser-js": "npm:ua-parser-js@0.7.10"
+    },
+    "npm:font-awesome@4.5.0": {
+      "css": "github:systemjs/plugin-css@0.1.20"
     },
     "npm:google-map-react@0.11.2": {
       "es6-promise": "npm:es6-promise@3.1.2",

@@ -2,6 +2,7 @@
 @import 'utils/mixins';
 
 @import '../jspm_packages/npm/normalize.css@4.0.0/normalize.css';
+@import "../jspm_packages/npm/font-awesome@4.5.0/scss/font-awesome.scss";
 
 @import 'components/base-styles';
 @import 'components/grid';
@@ -17,3 +18,4 @@
 @import 'components/person';
 @import 'components/people';
 @import 'components/map';
+@import 'components/footer';
