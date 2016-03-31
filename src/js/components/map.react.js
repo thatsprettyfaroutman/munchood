@@ -34,13 +34,11 @@ export default class Map extends React.Component {
           let lat = parseFloat( data[this.props.row].latitude );
           let lng = parseFloat( data[this.props.row].longitude );
           let center = new google.maps.LatLng( lat, lng );
+          let mapCenter = null;
 
           let mapPin = {
-            url: 'images/map-pin.png',
-            scaledSize: new google.maps.Size(241 / 2, 291 / 2)
-            // size: new google.maps.Size(100, 100),
-            // origin: new google.maps.Point(50, 50),
-            // anchor: new google.maps.Point(0, 0)
+            url: ( this._svgIsSupported() ? 'images/map-pin.svg' : 'images/map-pin.png' ),
+            scaledSize : new google.maps.Size(241 / 2, 291 / 2),
           };
 
           let marker = new google.maps.Marker({
@@ -49,7 +47,16 @@ export default class Map extends React.Component {
             icon : mapPin
           });
 
-          gmap.panTo( center );
+          //
+          // let projection = gmap.getProjection();
+          // let pixelPoint = projection.fromLatLngToPoint(center);
+          // pixelPoint.y = pixelPoint.y - (291 / 4);
+          // console.log(pixelPoint);
+          // mapCenter = projection.fromPointToLatLng(pixelPoint);
+
+          // gmap.panTo( center );
+          gmap.setCenter( mapCenter || center );
+
         }
       });
 
@@ -63,10 +70,13 @@ export default class Map extends React.Component {
       <div id={ this.state.uid } className="map"></div>
     );
   }
+
+  _svgIsSupported() {
+    return document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Shape", "1.0")
+  }
 }
 
 Map.defaultProps = {
-  // center : {lat : 59.938043, lng : 30.337157},
   row : 0,
   zoom : 17,
   scrollwheel : false,

@@ -1,5 +1,8 @@
 $block : 'map';
+$air : 30px !default;
+$air-between-items : $air * 4 !default;
 
 .#{$block} {
   height : 960px;
+  margin-bottom : $air-between-items;
 }
