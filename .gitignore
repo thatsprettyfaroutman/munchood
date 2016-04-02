@@ -5,3 +5,4 @@ src/jspm_packages
 src/build.min.js
 src/build.min.js.map
 src/main.min.css
+src/index.min.html

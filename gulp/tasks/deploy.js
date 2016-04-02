@@ -3,6 +3,7 @@ import util    from 'gulp-util';
 import ftp     from 'vinyl-ftp';
 import confirm from 'gulp-confirm';
 import plumber from 'gulp-plumber';
+import rename  from 'gulp-rename';
 
 import config  from '../config';
 
@@ -42,6 +43,12 @@ gulp.task( 'deploy', done => {
       question: 'Gonna push to production, u sure? (y/n)',
       input: '_key:y'
     }) )
+    .pipe( rename(path => {
+      if ( path.basename == 'index.min' && path.extname == '.html' ) {
+        path.basename = 'index'
+      }
+    }) )
     .pipe( conn.newer( config.deploy.destination ) ) // only upload newer files
     .pipe( conn.dest( config.deploy.destination ) );
+
 } );
