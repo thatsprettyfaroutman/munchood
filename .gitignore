@@ -1,5 +1,7 @@
+.DS_Store
 node_modules
+gulp/config.js
 src/jspm_packages
-src/js/build.js
-src/js/build.js.map
+src/build.min.js
+src/build.min.js.map
 src/main.min.css

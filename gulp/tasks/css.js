@@ -1,5 +1,4 @@
 import gulp         from 'gulp';
-import gutil        from 'gulp-util';
 import sass         from 'gulp-sass';
 import autoprefixer from 'gulp-autoprefixer';
 import cssnano      from 'gulp-cssnano';
@@ -15,7 +14,7 @@ import config       from '../config';
 
 gulp.task('css:compile', () => {
 	return gulp
-		.src(config.path.sass.main)
+		.src(config.css.main)
 		.pipe(plumber({
 			errorHandler : config.handleError
 		}))
@@ -26,7 +25,7 @@ gulp.task('css:compile', () => {
 		}))
 		.pipe(cssnano())
 		.pipe(rename({
-			suffix : '.min'
+			suffix : config.css.suffix
 		}))
-		.pipe(gulp.dest(config.path.sass.output));
+		.pipe(gulp.dest(config.css.outputDir));
 });
