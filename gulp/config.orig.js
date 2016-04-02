@@ -8,9 +8,26 @@ export default {
     outputDir : 'src/'
   },
 
-  // TODO: Add FTP settigns here
-  ftp : {
+  deploy : {
+    connection : {
+      host     : '',
+      port     : '21',
+      user     : '',
+      password : '',
+      parallel : 4,
+      log      : util.log
+    },
 
+    globs : [
+      'src/images/**/*',
+      'src/index.html',
+      'src/build.min.js',
+      'src/main.min.css',
+      'src/jspm_packages/npm/font-awesome@4.5.0/fonts/**/*',
+    ],
+
+    'base' : 'src/',
+    destination : 'html/'
   },
 
   inject : {

@@ -37,6 +37,7 @@
     "babel-core": "^5.1.13",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-confirm": "^1.0.4",
     "gulp-cssnano": "^2.1.1",
     "gulp-inject": "^3.0.0",
     "gulp-jspm": "^0.5.7",

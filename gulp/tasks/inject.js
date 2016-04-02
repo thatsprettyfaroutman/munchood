@@ -34,12 +34,14 @@ gulp.task('inject', (done) => {
           ext = ext[ext.length - 1];
           ext = ext.toLowerCase();
 
+          let actualFilePath = filePath.replace('src/', '');
+
           switch (ext) {
             case 'css':
-              return '<link rel="stylesheet" href="' + filePath + filePathSuffix + '" type="text/css">';
+              return '<link rel="stylesheet" href="' + actualFilePath + filePathSuffix + '" type="text/css">';
 
             case 'js':
-              return '<script src="' + filePath + filePathSuffix + '" type="text/css"></script>';
+              return '<script src="' + actualFilePath + filePathSuffix + '"></script>';
           }
         }
       }))
