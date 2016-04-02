@@ -10,3 +10,11 @@ $air : 30px !default;
     margin : 0 auto;
   }
 }
+
+@media #{ $media-phone } {
+  .#{$block} {
+    img {
+      height : 50px;
+    }
+  }
+}

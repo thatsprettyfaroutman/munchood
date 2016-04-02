@@ -8,6 +8,12 @@ $air-between-items : $air * 4 !default;
   background-color : $gray;
 }
 
+@media #{ $media-phone } {
+  .#{$block} {
+    padding : $air;
+  }
+}
+
 .#{$block} .text-block {
   margin-top : 0;
   margin-bottom : $air * 2;
@@ -19,6 +25,12 @@ $air-between-items : $air * 4 !default;
 
   &::after {
     content : none;
+  }
+}
+
+@media #{ $media-phone } {
+  .#{$block} .heading {
+    font-size : $font-medium--plus;
   }
 }
 

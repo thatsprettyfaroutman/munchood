@@ -9,7 +9,7 @@ export default class Person extends React.Component {
   render() {
     return (
       <div className="person">
-        <div className="grid-row grid-row--no-padding">
+        <div className="grid-row">
 
           <div className="grid-col grid-col--50">
             <div className="person__text">

@@ -19,3 +19,14 @@ $air : 30px !default;
 		color : $turquoise;
 	}
 }
+
+@media #{ $media-phone } {
+  .#{$block} {
+    padding : $air 0;
+    
+    a {
+      font-size : 20px;
+      margin : 0 10px;
+    }
+  }
+}

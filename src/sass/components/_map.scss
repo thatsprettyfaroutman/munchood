@@ -6,3 +6,10 @@ $air-between-items : $air * 4 !default;
   height : 960px;
   margin-bottom : $air-between-items;
 }
+
+@media #{ $media-phone } {
+  .#{$block} {
+    height : 75vh;
+    margin-bottom : 0;
+  }
+}

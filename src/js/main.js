@@ -27,18 +27,18 @@ class App extends React.Component {
 
         <section className="features">
           <div className="grid-row features__item">
-            <div className="grid-col grid-col--40">
+            <div className="grid-col grid-col--40 grid-col--tablet--50">
               <TextBlock row="1" addSpace="after" />
             </div>
-            <div className="grid-col grid-col--60">
+            <div className="grid-col grid-col--60 grid-col--tablet--50">
               <Image row="0" />
             </div>
           </div>
           <div className="grid-row features__item">
-            <div className="grid-col grid-col--40 grid-col--right">
+            <div className="grid-col grid-col--40 grid-col--tablet--50 grid-col--right">
               <TextBlock row="2" addSpace="before" />
             </div>
-            <div className="grid-col grid-col--60 grid-col--right">
+            <div className="grid-col grid-col--60 grid-col--tablet--50 grid-col--right">
               <Image row="1" />
             </div>
           </div>
@@ -54,9 +54,11 @@ class App extends React.Component {
         </section>
 
         <section className="team">
-          <div className="grid-row">
-            <div className="grid-col grid-col--50 grid-col--tablet--60 grid-col--center">
-              <TextBlock row="4" align="center" />
+          <div className="team__top">
+            <div className="grid-row">
+              <div className="grid-col grid-col--50 grid-col--tablet--60 grid-col--center">
+                <TextBlock row="4" align="center" />
+              </div>
             </div>
           </div>
           <People />
@@ -64,11 +66,11 @@ class App extends React.Component {
 
         <section className="contact-info">
           <div className="grid-row grid-row--no-padding grid-row--full-width">
-            <div className="grid-col grid-col--60">
-              <Map />
-            </div>
-            <div className="grid-col grid-col--40">
+            <div className="grid-col grid-col--40 grid-col--right">
               <TextBlock row="5" addSpace="before" />
+            </div>
+            <div className="grid-col grid-col--60 grid-col--right">
+              <Map />
             </div>
           </div>
         </section>

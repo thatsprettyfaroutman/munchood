@@ -1,15 +1,20 @@
 $block : 'signup-form';
 $air : 30px !default;
 
-.#{$block} {
-  form {
-    position : relative;
-    display : block;
-    max-width : 640px - 140 - $air;
-    height : 70px;
-    margin : 0 auto;
-    padding : 0;
-    padding-right : 140px + $air;
+.#{$block} form {
+  position : relative;
+  display : block;
+  max-width : 640px - 140 - $air;
+  height : 70px;
+  margin : 0 auto;
+  padding : 0;
+  padding-right : 140px + $air;
+}
+
+@media #{ $media-phone } {
+  .#{$block} form {
+    padding-right : 0;
+    height : auto;
   }
 }
 
@@ -21,6 +26,12 @@ $air : 30px !default;
   line-height: 70px;
   padding : 0 $air;
   border : none;
+}
+
+@media #{ $media-phone } {
+  .#{$block} input[type=text] {
+    font-size : $font-medium;
+  }
 }
 
 .#{$block} button[type=submit] {
@@ -36,6 +47,15 @@ $air : 30px !default;
   font-family : $font-lato;
   font-size : $font-medium;
   text-transform: uppercase;
+}
+
+@media #{ $media-phone } {
+  .#{$block} button[type=submit] {
+    position : relative;
+    display : block;
+    width : 100%;
+    height : 70px;
+  }
 }
 
 .#{$block} input[name=email] {

@@ -1,7 +1,12 @@
 $block : 'team';
 $air : 30px !default;
+$air-between-items : $air * 4 !default;
 
 .#{$block} .text-block p:first-of-type {
   font-family : $font-georgia;
   font-style : italic;
+}
+
+.#{$block}__top {
+  margin-bottom : $air-between-items;
 }

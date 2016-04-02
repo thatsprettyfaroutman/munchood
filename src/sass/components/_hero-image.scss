@@ -1,5 +1,6 @@
 $block : 'hero-image';
 $air : 30px !default;
+$air-between-items : $air * 4 !default;
 
 .#{$block} {
   position : relative;
@@ -7,6 +8,7 @@ $air : 30px !default;
   height : 600px;
   padding-top : 50px;
   padding-bottom : 50px;
+  margin-bottom : $air-between-items;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -22,11 +24,13 @@ $air : 30px !default;
   }
 
   h1, h2, h3, h4, h5, h6, p {
-    position : relative;
+    position : absolute;
     top : 50%;
     max-width : 1000px;
     margin : 0 auto;
-    margin-top : 250px * -0.5;
+    margin-top : 336px * -0.5;
+    padding-right : $air;
+    padding-left : $air;
     text-align : center;
     font-family : $font-brandon;
     text-transform: uppercase;
@@ -36,10 +40,43 @@ $air : 30px !default;
   }
 }
 
+@media #{ $media-tablet-and-phone } {
+  .#{$block} {
+    h1, h2, h3, h4, h5, h6, p {
+      font-size : $font-large--phone;
+    }
+  }
+}
+
+@media #{ $media-phone } {
+  .#{$block} {
+    min-height : calc(100vh - 112px);
+    height : auto;
+    padding-top : 1px;
+    padding-bottom : 1px;
+
+    h1, h2, h3, h4, h5, h6, p {
+      font-size : $font-medium;
+      margin-top : 90px * -0.5;
+    }
+  }
+}
+
+
+
+
 .#{$block}__arrow {
   position : absolute;
   width : 46px;
   left : 50%;
   bottom : $air * 2;
   margin-left : 46px * -0.5;
+}
+
+@media #{ $media-phone } {
+  .#{$block}__arrow {
+    width : 46px * 0.5;
+    bottom : $air;
+    margin-left : 46px * -0.25;
+  }
 }

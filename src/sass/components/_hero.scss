@@ -1,5 +1,10 @@
 $block : 'hero';
 $air : 30px !default;
+$air-between-items : $air * 4 !default;
+
+.#{$block} {
+  margin-bottom : $air-between-items;
+}
 
 .#{$block}__text {
   p {

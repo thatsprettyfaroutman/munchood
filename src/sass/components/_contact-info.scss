@@ -1,0 +1,11 @@
+$block : 'contact-info';
+
+
+@each $query in ( $media-tablet-landscape $media-tablet-and-phone ) {
+  @media #{ $query } {
+    .#{$block} .text-block {
+      padding-right : $air;
+      padding-left : $air;
+    }
+  }
+}

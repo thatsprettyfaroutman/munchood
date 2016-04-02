@@ -28,5 +28,41 @@ $air-between-items : $air * 4 !default;
 }
 
 .#{$block}__text {
-  padding : $air * 4;
+  margin-top : $air * 4;
+  padding-right : $air * 4;
+  padding-left : $air * 4;
+}
+
+@each $query in ( $media-tablet-landscape $media-tablet-and-phone ) {
+  @media #{ $query } {
+    .#{$block}__text {
+      margin-top : $air * 2;
+      padding-right : $air * 3;
+      padding-left : 0;
+    }
+
+    .person:nth-child(even) .#{$block}__text {
+      padding-right : 0;
+      padding-left : $air * 3;
+    }
+  }
+}
+
+@media #{ $media-tablet-and-phone } {
+  .#{$block}__text {
+    padding-right : $air;
+  }
+
+  .person:nth-child(even) .#{$block}__text {
+    padding-left : $air;
+  }
+}
+
+@media #{ $media-phone } {
+  .#{$block}__text {
+    margin-top : 0;
+    margin-bottom : $air;
+    padding-left : 0 !important;
+    padding-right : 0 !important;
+  }
 }
