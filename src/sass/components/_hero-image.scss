@@ -26,6 +26,8 @@ $air-between-items : $air * 4 !default;
   h1, h2, h3, h4, h5, h6, p {
     position : absolute;
     top : 50%;
+    right : 0;
+    left : 0;
     max-width : 1000px;
     margin : 0 auto;
     margin-top : 336px * -0.5;
